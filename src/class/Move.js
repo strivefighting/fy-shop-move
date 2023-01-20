@@ -46,11 +46,17 @@ export default class Move {
             div.style.setProperty('--x', `${x}px`);
             div.style.setProperty('--y', `${y}px`);
 
-            div.addEventListener('animationend', () => {
+
+
+            div.addEventListener('animationend', (e) => {
                 this.moveEndCallback();
                 div.remove();
             })
 
+            // Fix that the moveEndCallback method is called twice
+            plus.addEventListener('animationend', (e) => {
+                e.stopPropagation();
+            })
             document.body.appendChild(div);
         })
     }

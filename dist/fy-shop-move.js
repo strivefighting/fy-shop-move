@@ -1,10 +1,10 @@
-const v = "_plusWrap_dvh9j_1", h = "_moveY_dvh9j_1", m = "_plusTarget_dvh9j_15", p = "_moveX_dvh9j_1", c = {
-  plusWrap: v,
-  moveY: h,
-  plusTarget: m,
+const m = "_plusWrap_dvh9j_1", d = "_moveY_dvh9j_1", h = "_plusTarget_dvh9j_15", p = "_moveX_dvh9j_1", n = {
+  plusWrap: m,
+  moveY: d,
+  plusTarget: h,
   moveX: p
 };
-class d {
+class E {
   /**
    * 
    * @param {Object} options 参数
@@ -21,10 +21,12 @@ class d {
   init() {
     this.checkOptions() && this.clickEle.addEventListener("click", () => {
       const e = document.createElement("div"), t = document.createElement("div");
-      e.className = c.plusWrap, t.className = c.plusTarget, t.innerHTML = this.moveHTML, e.appendChild(t);
-      const s = this.clickEle.getBoundingClientRect(), o = s.left + s.width / 2 - this.moveEleSize / 2, i = s.top - this.moveEleSize, l = this.storeEle.getBoundingClientRect(), n = l.left + l.width / 2 - this.moveEleSize / 2 - o, a = l.top - this.moveEleSize - i;
-      e.style.setProperty("--left", `${o}px`), e.style.setProperty("--top", `${i}px`), e.style.setProperty("--x", `${n}px`), e.style.setProperty("--y", `${a}px`), e.addEventListener("animationend", () => {
+      e.className = n.plusWrap, t.className = n.plusTarget, t.innerHTML = this.moveHTML, e.appendChild(t);
+      const s = this.clickEle.getBoundingClientRect(), o = s.left + s.width / 2 - this.moveEleSize / 2, i = s.top - this.moveEleSize, l = this.storeEle.getBoundingClientRect(), a = l.left + l.width / 2 - this.moveEleSize / 2 - o, v = l.top - this.moveEleSize - i;
+      e.style.setProperty("--left", `${o}px`), e.style.setProperty("--top", `${i}px`), e.style.setProperty("--x", `${a}px`), e.style.setProperty("--y", `${v}px`), e.addEventListener("animationend", (c) => {
         this.moveEndCallback(), e.remove();
+      }), t.addEventListener("animationend", (c) => {
+        c.stopPropagation();
       }), document.body.appendChild(e);
     });
   }
@@ -32,11 +34,11 @@ class d {
     return [this.clickEle, this.storeEle, this.moveHTML, this.moveEleSize].some((e) => !e) ? (console.error("The parameters of Move class is illegal!"), !1) : !0;
   }
 }
-class E {
+class u {
   static create(e) {
-    return new d(e);
+    return new E(e);
   }
 }
 export {
-  E as default
+  u as default
 };
