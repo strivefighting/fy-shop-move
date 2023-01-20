@@ -1,0 +1,43 @@
+{
+  "name": "fy-shop-move",
+  "version": "1.0.0",
+  "description": "A simple shopping cart animation effect",
+  "main": "./dist/fy-shop-move.umd.cjs",
+  "module": "./dist/fy-shop-move.js",
+  "files": [
+    "dist/",
+    "src/"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/fy-shop-move.js",
+      "require": "./dist/fy-shop-move.umd.cjs"
+    },
+    "./style": {
+      "import": "./dist/style.css",
+      "require": "./dist/style.css"
+    }
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/strivefighting/fy-shop-move.git"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [
+    "animate",
+    "cart",
+    "move",
+    "shop",
+    "js"
+  ],
+  "author": "fychonger <454228224@qq.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "vite": "^4.0.0"
+  }
+}

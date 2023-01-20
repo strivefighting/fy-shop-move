@@ -1,0 +1,1 @@
+._plusWrap_dvh9j_1{--duration: .5s;position:absolute;left:var(--left);top:var(--top);animation:_moveY_dvh9j_1 var(--duration) cubic-bezier(.5,-.5,1,1)}._plusTarget_dvh9j_15{animation:_moveX_dvh9j_1 var(--duration) linear}@keyframes _moveY_dvh9j_1{to{transform:translateY(var(--y))}}@keyframes _moveX_dvh9j_1{to{transform:translate(var(--x))}}
