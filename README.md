@@ -16,6 +16,8 @@ npm install fy-shop-move --save
 yarn add fy-shop-move
 ```
 
+
+
 ## Usage
 
 ```typescript
@@ -45,3 +47,6 @@ yarn add fy-shop-move
 | moveEndCallback | Function |  | Animation end callback function |
 
 
+## Example
+
+![demo](https://raw.githubusercontent.com/strivefighting/fy-image/master/assets/3.gif)
